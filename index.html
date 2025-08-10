@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KPC REALTY | Real Estate Solutions</title>
+  <style>
+
+
+/* Make text and layout adapt to mobile */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make sections adapt */
+section {
+  padding: 20px;
+}
+
+/* Footer responsive design */
+footer {
+  text-align: center;
+}
+
+footer div {
+  flex: 1 1 100%;
+}
+
+/* Navigation responsive design */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .services,
+  .gallery {
+    display: block;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+  }
+}
+/* mobile specific ended */
+
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    html {
+  scroll-behavior: smooth;
+    }
+
+    header {
+  background-color: #558cc4;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('building-image.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 8rem 2rem; /* Increased height */
+  min-height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.5rem;
+}
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #001f3f;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .service-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .service-box:hover {
+      transform: scale(1.05);
+    }
+    .service-box h3 {
+      margin-bottom: 0.8rem;
+      color: #003366;
+    }
+    .about {
+      background-color: #e9f1ff;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    .contact {
+      background: #558cc4;
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+    }
+    footer {
+      text-align: center;
+      background: #001f3f;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-grid .gallery-item {
+  text-align: center;
+}
+
+.gallery-grid .gallery-item p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.property-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.property-item img:hover {
+  transform: scale(1.05);
+}
+
+.property-item h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.property-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+    <header>
+        <div style="display: flex; align-items: center;">
+          <img src="kpc-logo.png" alt="KPC Realty Logo" style="height: 50px; margin-right: 15px;">
+          <h1>KPC REALTY</h1>
+        </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#properties">Properties</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          
+        </nav>
+      </header>
+      
+      
+
+      <section class="hero">
+        <h2>Your Trusted Real Estate Partner</h2>
+        <p>Serving Greater Hyderabad with Transparency, Trust, and Excellence</p>
+      </section>
+      
+
+<!-- Hero Section -->
+<section id="home" style="background: url('https://source.unsplash.com/1600x900/?real-estate,house') center/cover no-repeat; color: white; text-align: center; padding: 100px 20px; font-family: Arial, sans-serif;">
+  <div style="background-color: rgba(0,0,0,0.5); padding: 50px; border-radius: 10px; display: inline-block;">
+    <h1 style="font-size: 48px; margin-bottom: 20px;">Welcome to KPC Realty</h1>
+    <p style="font-size: 20px; margin-bottom: 30px;">Your trusted partner in buying, selling, and investing in Greater Hyderabad.</p>
+    <a href="#services" style="background-color: #ff9800; color: white; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 5px;">Explore Our Services</a>
+  </div>
+</section>
+
+
+
+
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p style="max-width: 800px; margin: auto; line-height: 1.8;">
+      <strong>KPC REALTY</strong> is a fast-growing real estate startup based in Greater Hyderabad with over <strong>15 years of industry experience</strong>. We are committed to providing seamless real estate services with complete transparency, trust, and dedication.
+      <br><br>
+      Whether you are a homebuyer, seller, or investor, we offer expert guidance every step of the way — from property selection and site visits to legal verification and deal closure.
+      <br><br>
+      Our mission is to simplify the real estate journey by offering reliable support, verified properties, and tailor-made solutions that match your needs. We specialize in buying, selling, leasing, and investment opportunities in both residential and commercial spaces.
+      <br><br>
+      At KPC REALTY, we don’t just deal in properties — we build lasting relationships based on integrity and results, backed by our extensive industry knowledge and customer-first approach.
+    </p>
+  </section>
+  
+
+
+ <section id="services" style="padding: 50px 20px; text-align: center; background-color: #f8f9fa;">
+  <h2 style="font-size: 2.5rem; margin-bottom: 40px; color: #333;">Our Services</h2>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: auto;">
+    
+    <!-- Buying & Selling -->
+    <div style="background: white; border-radius: 15px; padding: 30px; width: 250px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="https://cdn-icons-png.flaticon.com/128/7314/7314483.png" alt="Buying & Selling" style="width: 70px; margin-bottom: 20px;">
+      <h3 style="color: #444;">Buying & Selling</h3>
+      <p style="color: #666;">Homes, villas, offices, and more across Greater Hyderabad.</p>
+    </div>
+
+    <!-- Leasing & Renting -->
+    <div style="background: white; border-radius: 15px; padding: 30px; width: 250px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Leasing & Renting" style="width: 70px; margin-bottom: 20px;">
+      <h3 style="color: #444;">Leasing & Renting</h3>
+      <p style="color: #666;">Commercial spaces, offices, and residential properties.</p>
+    </div>
+
+    <!-- Land Investments -->
+    <div style="background: white; border-radius: 15px; padding: 30px; width: 250px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="https://cdn-icons-png.flaticon.com/512/3097/3097040.png" alt="Land Investments" style="width: 70px; margin-bottom: 20px;">
+      <h3 style="color: #444;">Land Investments</h3>
+      <p style="color: #666;">Agriculture lands & profitable investment opportunities.</p>
+    </div>
+
+    <!-- Full Real Estate Solutions -->
+    <div style="background: white; border-radius: 15px; padding: 30px; width: 250px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Real Estate Solutions" style="width: 70px; margin-bottom: 20px;">
+      <h3 style="color: #444;">Full Solutions</h3>
+      <p style="color: #666;">End-to-end services with transparency & trust.</p>
+    </div>
+
+  </div>
+</section>
+
+<!--
+    <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <img src="https://cdn.thepropertyagent.casa/wp-content/uploads/2020/05/house-for-houses-home-slide-1.jpg" alt="Modern Villa">
+          <p>Modern Villa</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://www.apartments.com/blog/sites/default/files/styles/large/public/image/2023-06/the-huntley-atlanta-ga-luxury-apartment-view.jpg?itok=l26TswZZ" alt="Luxury Apartment">
+          <p>Luxury Apartment</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://fancyhouse-design.com/wp-content/uploads/2024/05/A-premium-leather-magnificence-chair-adds-a-touch-of-opulence-to-the-high-end-management-magnificence-furniture-ensemble.jpg" alt="Commercial Office">
+          <p>Commercial Office</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://techcrunch.com/wp-content/uploads/2017/07/gettyimages-185274428.jpg" alt="Green Farmland">
+          <p>Green Farmland</p>
+        </div>
+        <div class="gallery-item">
+            
+          <img src="https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/handshake-pano_19966.jpg" alt="Handshake Deal">
+          <p> Trusted Deal</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://media.istockphoto.com/id/1406960186/photo/the-skyline-of-new-york-city-united-states.jpg?s=612x612&w=0&k=20&c=yZJXNdzq3d5bKgvVzPBahBujpbVUXFyjyl9FN9L7esM=" alt="City Skyline">
+          <p>City Skyline</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://gos3.ibcdn.com/69256c44-b62d-4e91-b7c5-a906f00f7980.jpg" alt="Farm House">
+            <p>Farm House</p>
+          </div>
+
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/736x/0d/f4/eb/0df4eb22625b0dff3be9235756c405c8.jpg" alt="Aerial View">
+            <p>Aerial View</p>
+          </div>
+      </div>
+      
+  </section>  -->
+  <section class="section" id="gallery">
+    <h2>Our World of Real Estate</h2>
+    <div class="gallery-grid">
+      <img src="https://cdn.thepropertyagent.casa/wp-content/uploads/2020/05/house-for-houses-home-slide-1.jpg" alt="Modern Villa">
+      <img src="https://www.apartments.com/blog/sites/default/files/styles/large/public/image/2023-06/the-huntley-atlanta-ga-luxury-apartment-view.jpg?itok=l26TswZZ" alt="Luxury Apartment">
+      <img src="https://fancyhouse-design.com/wp-content/uploads/2024/05/A-premium-leather-magnificence-chair-adds-a-touch-of-opulence-to-the-high-end-management-magnificence-furniture-ensemble.jpg" alt="Commercial Office">
+      <img src="https://techcrunch.com/wp-content/uploads/2017/07/gettyimages-185274428.jpg" alt="Green Farmland">
+      <img src="data:image/jpeg;base64,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" alt="Handshake Deal">
+      <img src="https://media.istockphoto.com/id/1406960186/photo/the-skyline-of-new-york-city-united-states.jpg?s=612x612&w=0&k=20&c=yZJXNdzq3d5bKgvVzPBahBujpbVUXFyjyl9FN9L7esM=" alt="City Skyline">
+      <!--<img src="https://gos3.ibcdn.com/69256c44-b62d-4e91-b7c5-a906f00f7980.jpg" alt="Farm House">
+      <img src="https://i.pinimg.com/736x/0d/f4/eb/0df4eb22625b0dff3be9235756c405c8.jpg" alt="Aerial View">
+    -->
+    </div>
+  </section> 
+
+  <section class="section" id="properties">
+    <h2>Explore Our Property Categories</h2>
+    <div class="property-grid">
+      <div class="property-item">
+        <img src="https://content.jdmagicbox.com/v2/comp/hyderabad/l3/040pxx40.xx40.211228154512.p9l3/catalogue/rainbow-vistas-rock-gardens-borabanda-hyderabad-residential-buildings-9d34jgyqw6.jpg" alt="Apartments">
+        <h3>Luxury Apartments</h3>
+        <p>Spacious and well-connected apartments in prime locations.</p>
+      </div>
+      <div class="property-item">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Villas">
+        <h3>Modern Villas</h3>
+        <p>Independent homes with premium designs and amenities.</p>
+      </div>
+      <div class="property-item">
+        <img src="https://d1di04ifehjy6m.cloudfront.net/media/filer_public/67/ca/67cac7fa-1853-4f1d-95ed-db1ed6b38ec5/adobestock_212026013_2.png" alt="Commercial">
+        <h3>Commercial Spaces</h3>
+        <p>Office spaces and retail units for businesses of all sizes.</p>
+      </div>
+      <div class="property-item">
+        <img src="https://joynivaasinfra.com/wp-content/uploads/2020/10/properties-5.png" alt="Land">
+        <h3>Agricultural & Open Plots</h3>
+        <p>Fertile lands and investment-ready plots across the region.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!--
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+  <p>We’d love to hear from you! Fill out the form below and we’ll get back to you soon.</p>
+  
+  <form action="https://formspree.io/f/mkgzkbrp" method="POST" style="max-width: 500px; margin: 2rem auto;">
+    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 1rem; border-radius: 5px; border: none;">
+    
+    <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 1rem; border-radius: 5px; border: none;">
+    
+    <textarea name="message" rows="5" placeholder="Your Message" required style="width: 100%; padding: 10px; margin-bottom: 1rem; border-radius: 5px; border: none;"></textarea>
+    
+    <button type="submit" style="padding: 10px 20px; background-color: gold; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+      Send Message
+    </button>
+  </form>
+  </section>-->
+
+  <style>
+  #contact {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+
+  #contact h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+
+  .form-row label {
+    width: 120px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .form-row textarea {
+    resize: none;
+    height: 100px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+
+  #formStatus {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+</style>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm" action="https://formspree.io/f/mkgzkbrp" method="POST">
+    <div class="form-row">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+    </div>
+    <div class="form-row">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
+    </div>
+    <div class="form-row">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+  <p id="formStatus" style="display: none;">✅ Message Sent Successfully!</p>
+</section>
+
+
+<script>
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    
+    const formData = new FormData(form);
+    
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    
+    if (response.ok) {
+      form.reset();
+      status.textContent = "✅ Message Sent Successfully!";
+      status.style.color = "green";
+      status.style.display = 'block';
+    } else {
+      status.textContent = "❌ Oops! Something went wrong.";
+      status.style.color = "red";
+      status.style.display = 'block';
+    }
+  });
+</script>
+
+
+<style>
+  html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+  footer a:hover {
+    color: #ff9800; /* Highlight effect on hover */
+  }
+</style>
+
+<!-- Footer -->
+<footer style="background-color: #222; color: white; padding: 40px 20px 20px; font-family: Arial, sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+    <!-- Company Info -->
+    <div style="flex: 1 1 250px; margin-bottom: 20px;">
+      <h3 style="color: #ff9800;">KPC REALTY</h3>
+      <p>Your trusted real estate partner in Greater Hyderabad.  
+         We bring you reliable property solutions with transparency and trust.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h4 style="color: #ff9800;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
+        <li><a href="#about" style="color: white; text-decoration: none;">About Us</a></li>
+        <li><a href="#services" style="color: white; text-decoration: none;">Services</a></li>
+        <li><a href="#gallery" style="color: white; text-decoration: none;">Gallery</a></li>
+        <li><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex: 1 1 250px; margin-bottom: 20px;">
+      <h4 style="color: #ff9800;">Contact Us</h4>
+      <p>📍 Address: Jubilee Hills, Road No. 9, Hyderabad, Telangana, India</p>
+      <p>📞 Phone: <a href="tel:+919876543210" style="color: white; text-decoration: none;">+91 98765 43210</a></p>
+      <p>✉ Email: <a href="mailto:info@kpcrealty.com" style="color: white; text-decoration: none;">info@kpcrealty.com</a></p>
+    </div>
+
+    <!-- Social Media -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h4 style="color: #ff9800;">Follow Us</h4>
+      <a href="https://instagram.com" target="_blank" style="margin-right: 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 30px; height: 30px;">
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 30px; height: 30px;">
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="text-align: center; margin-top: 20px; padding-top: 10px; border-top: 1px solid #444;">
+    <p style="margin: 0;">&copy; 2025 KPC Realty. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Smooth Scroll & Back to Top -->
+<script>
+  // Add smooth scroll for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      } else if (this.getAttribute("href") === "#top") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+ <!-- <footer>
+    &copy; 2025 KPC REALTY | All Rights Reserved
+  </footer>
+
+  -->
+
+  <!-- Footer -->
+
+
+
+
+
+
+
+
+</body>
+</html>
